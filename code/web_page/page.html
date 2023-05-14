@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finanza</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Benvenuto nella sezione di finanza</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Notizie</a></li>
+			<li><a href="#">Articoli</a></li>
+			<li><a href="#">Contattaci</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section>
+			<?php for(i = 0 ; i<10; i++){ ?>
+			<article>
+				<header>
+					<h2>Titolo dell'articolo</h2>
+					<p>Scritto da Autore il 04/05/2023</p>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu massa vel consectetur. Vestibulum et ornare quam. Etiam pellentesque laoreet malesuada. Sed vehicula porttitor eros, vel tincidunt tellus mattis eu. Suspendisse potenti. In fringilla, orci eu bibendum malesuada, ex lacus scelerisque mauris, vel euismod felis lorem nec libero.</p>
+				<footer>
+					<p>Tag: Finanza, Investimenti, Mercati</p>
+				</footer>
+			</article>
+			<?php }?>
+			
+		</section>
+	</main>
+
+	<footer>
+		<p>Copyright © Finanza 
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Reset dei margini e dei padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Impostazioni di base */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #008080;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Navigazione */
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Articoli */
+  article {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  article header {
+    margin-bottom: 10px;
+  }
+  
+  article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  article p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  article footer {
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  /* Media query per la versione mobile */
+  @media only screen and (max-width: 600px) {
+    /* Navigazione */
+    nav li {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  
+    /* Articoli */
+    article {
+      padding: 10px;
+    }
+  
+    article h2 {
+      font-size: 20px;
+    }
+  
+    article p {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  
+    article footer {
+      font-size: 12px;
+    }
+  }
+  
