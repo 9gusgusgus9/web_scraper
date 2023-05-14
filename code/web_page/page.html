@@ -3,6 +3,12 @@
 <head>
 	<title>Finanza</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/Scraper.js"></script>
+	<script type="text/javascript" src="js/Source.js"></script>
+	<script type="text/javascript" src="js/Article.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
 </head>
 <body>
 	<header>
@@ -19,21 +25,8 @@
 	</nav>
 
 	<main>
-		<section>
-			<?php for(i = 0 ; i<10; i++){ ?>
-			<article>
-				<header>
-					<h2>Titolo dell'articolo</h2>
-					<p>Scritto da Autore il 04/05/2023</p>
-				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu massa vel consectetur. Vestibulum et ornare quam. Etiam pellentesque laoreet malesuada. Sed vehicula porttitor eros, vel tincidunt tellus mattis eu. Suspendisse potenti. In fringilla, orci eu bibendum malesuada, ex lacus scelerisque mauris, vel euismod felis lorem nec libero.</p>
-				<footer>
-					<p>Tag: Finanza, Investimenti, Mercati</p>
-				</footer>
-			</article>
-			<?php }?>
-			
-		</section>
+		<section id="main"></section>
+		
 	</main>
 
 	<footer>
