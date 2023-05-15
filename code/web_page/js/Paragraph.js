@@ -25,6 +25,4 @@ class Paragraph {
     getLabel() {
         return this.label;
     }
-
-
 }
