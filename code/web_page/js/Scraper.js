@@ -35,9 +35,15 @@ class Scraper {
                         type: "GET",
                         dataType: "html",
                         success: function (data) {
-                            var paragraphs = $(data).find("p");
-                            paragraphs.each(function () {
-                                var paragraph = new Paragraph($(this).text());
+                            var groups = $(data).find("div.group");
+                            groups.each(function () {
+                                var ps = $(this).find("p");
+                                var p = "";
+                                ps.each(function () {
+                                    p += $(this).text();
+                                    p += "\n";
+                                });
+                                var paragraph = new Paragraph(p);
                                 article.addParagraph(paragraph);
                             });
                         }

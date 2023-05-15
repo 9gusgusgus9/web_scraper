@@ -9,40 +9,50 @@ setTimeout(function () {
 scraper.getSources().forEach(source => {
 	source.getArticles().forEach(article => {
 
-        body = document.getElementById("main");
+                const art = document.createElement("article");
 
-        const header = document.createElement("header");
+                body = document.getElementById("main");
 
-        const h2 = document.createElement("h2");
-        const title = document.createTextNode(article.getTitle());
-        h2.appendChild(title);
+                const header = document.createElement("header");
 
-        header.appendChild(h2);
+                const h2 = document.createElement("h2");
+                const title = document.createTextNode(article.getTitle());
+                h2.appendChild(title);
 
-        const data = document.createElement("p");
-        const date = document.createTextNode(article.getPubDate());
-        data.appendChild(date);
+                header.appendChild(h2);
 
-        header.appendChild(data);
+                const data = document.createElement("p");
+                const date = document.createTextNode(article.getPubDate());
+                data.appendChild(date);
 
-        const par = document.createElement("p");
-        const text = document.createTextNode("Lorem ipsum");
-        
-        par.appendChild(text);
-        
-        const footer = document.createElement("footer");
-        const tag = document.createElement("p");
-        const tags = document.createTextNode("Tag: tag1, tag2, tag3...");
-        tag.appendChild(tags);
+                header.appendChild(data);
 
-        footer.appendChild(tag);
+                art.appendChild(header);
 
-        const art = document.createElement("article");
-        art.appendChild(header);
-        art.appendChild(par);
-        art.appendChild(footer);
 
-        body.appendChild(art);
+                article.getParagraphs().forEach(paragraph => {
+
+                        const par = document.createElement("p");
+                        var content = paragraph.getContent();
+                        console.log(content);
+                        const text = document.createTextNode(content);
+                        
+                        par.appendChild(text);
+                        
+                        art.appendChild(par);
+                });
+                        
+
+                const footer = document.createElement("footer");
+                const tag = document.createElement("p");
+                const tags = document.createTextNode("Tag: finance");
+                tag.appendChild(tags);
+
+                footer.appendChild(tag);
+
+                art.appendChild(footer);
+
+                body.appendChild(art);
 	});
 });
-}, 500);
+}, 5000);
