@@ -8,6 +8,10 @@ class Article {
     }
     // ...
 
+    addParagraph(paragraph) {
+        this.paragraphs.push(paragraph);
+    }
+
     getId() {
         return this.id;
     }

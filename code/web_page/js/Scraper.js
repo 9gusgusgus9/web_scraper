@@ -16,9 +16,9 @@ class Scraper {
 
 
     pullArticles(source) {
-        var link = source.getLink();
+        var link_s = source.getLink();
         $.ajax({
-            url: link,
+            url: link_s,
             type: "GET",
             dataType: "xml",
             success: function (data) {
@@ -29,6 +29,20 @@ class Scraper {
                     var link = el.find("link").text();
                     var pubDate = el.find("pubDate").text();
                     var article = new Article(title, description, link, pubDate);
+
+                    $.ajax({
+                        url: link,
+                        type: "GET",
+                        dataType: "html",
+                        success: function (data) {
+                            var paragraphs = $(data).find("p");
+                            paragraphs.each(function () {
+                                var paragraph = new Paragraph($(this).text());
+                                article.addParagraph(paragraph);
+                            });
+                        }
+                    });
+
                     //console.log(article.toString());
                     source.addArticle(article);
                 });
