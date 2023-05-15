@@ -14,6 +14,10 @@ class Paragraph {
         this.label = label;
     }
 
+    getContent() {
+        return this.content;
+    }
+
     getScore() {
         return this.score;
     }
