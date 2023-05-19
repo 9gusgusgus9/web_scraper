@@ -1,7 +1,12 @@
 class Source {
-    constructor(link) {
+    constructor(name, link) {
         this.articles = [];
+        this.name = name;
         this.link = link;
+    }
+
+    getName() {
+        return this.name;
     }
 
     getLink() {
