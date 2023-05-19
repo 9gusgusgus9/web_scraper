@@ -55,4 +55,4 @@ scraper.getSources().forEach(source => {
                 body.appendChild(art);
 	});
 });
-}, 5000);
+}, 1000);
