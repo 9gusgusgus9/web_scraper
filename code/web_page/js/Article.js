@@ -1,7 +1,7 @@
 class Article {
-    constructor(id, title, link, pubDate) {
-        this.id = id;
+    constructor(title, description, link, pubDate) {
         this.title = title;
+        this.description = description;
         this.link = link;
         this.pubDate = pubDate;
         this.paragraphs = [];
@@ -18,6 +18,10 @@ class Article {
 
     getTitle() {
         return this.title;
+    }
+
+    getDescription() {
+        return this.description;
     }
 
     getLink() {
