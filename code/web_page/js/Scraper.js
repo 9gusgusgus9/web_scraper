@@ -27,9 +27,8 @@ class Scraper {
                 $(data).find("item").each(function () {
                     var el = $(this);
                     var title = el.find("title").text();
-                    console.log(title.substr(0, 21));
-                    if (title.substr(0, 21) != "Pros on CNBC discussed") {
-                        var description = el.find("description").text();
+                    var description = el.find("description").text();
+                    if (description.substr(0, 22) !== "Pros on CNBC discussed") {
                         var link = el.find("link").text();
                         var pubDate = el.find("pubDate").text();
                         var article = new Article(title, description, link, pubDate);
