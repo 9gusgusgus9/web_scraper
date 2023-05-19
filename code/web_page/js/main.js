@@ -34,7 +34,7 @@ scraper.getSources().forEach(source => {
 
                         const par = document.createElement("p");
                         var content = paragraph.getContent();
-                        console.log(content);
+                        //console.log(content);
                         const text = document.createTextNode(content);
                         
                         par.appendChild(text);
@@ -55,4 +55,4 @@ scraper.getSources().forEach(source => {
                 body.appendChild(art);
 	});
 });
-}, 1000);
+}, 2000);
