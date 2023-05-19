@@ -21,6 +21,12 @@ scraper.getSources().forEach(source => {
 
                 header.appendChild(h2);
 
+                const h3 = document.createElement("h3");
+                const description = document.createTextNode(article.getDescription());
+                h3.appendChild(description);
+
+                header.appendChild(h3);
+
                 const data = document.createElement("p");
                 const date = document.createTextNode(article.getPubDate());
                 data.appendChild(date);
