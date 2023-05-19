@@ -1,5 +1,13 @@
+
 var sources = [];
-sources.push(new Source("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"))
+
+sources.push(new Source("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"));
+sources.push(new Source("https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml"));
+sources.push(new Source("https://www.realwire.com/rss/?id=564"));
+sources.push(new Source("https://www.thestreet.com/feeds/rss/"));
+sources.push(new Source("https://seekingalpha.com/sector/financial.xml"));
+sources.push(new Source("https://www.barchart.com/news/rss/financials"));
+
 
 var scraper = new Scraper(sources);
 scraper.scrape();
@@ -61,4 +69,4 @@ scraper.getSources().forEach(source => {
                 body.appendChild(art);
 	});
 });
-}, 2000);
+}, 3000);

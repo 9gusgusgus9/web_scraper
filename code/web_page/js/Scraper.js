@@ -19,8 +19,9 @@ class Scraper {
 
     pullArticles(source) {
         var link_s = source.getLink();
+        jQuery.support.cors = true;
         $.ajax({
-            url: link_s,
+            url: "https://cors-anywhere.herokuapp.com/" + link_s,
             type: "GET",
             dataType: "xml",
             success: function (data) {
@@ -34,7 +35,7 @@ class Scraper {
                         var article = new Article(title, description, link, pubDate);
 
                         $.ajax({
-                            url: link,
+                            url: "https://cors-anywhere.herokuapp.com/" + link,
                             type: "GET",
                             dataType: "html",
                             success: function (data) {
