@@ -26,12 +26,6 @@ scraper.getSources().forEach(source => {
 
                 header.appendChild(h2);
 
-                const h3 = document.createElement("h3");
-                const description = document.createTextNode(article.getDescription());
-                h3.appendChild(description);
-
-                header.appendChild(h3);
-
                 const data = document.createElement("p");
                 const date = document.createTextNode(article.getPubDate());
                 data.appendChild(date);
@@ -41,6 +35,13 @@ scraper.getSources().forEach(source => {
                 art.appendChild(header);
 
 
+                const p = document.createElement("p");
+                const description = document.createTextNode(article.getDescription());
+                p.appendChild(description);
+
+                art.appendChild(p);
+
+                /*
                 article.getParagraphs().forEach(paragraph => {
 
                         const par = document.createElement("p");
@@ -51,7 +52,7 @@ scraper.getSources().forEach(source => {
                         par.appendChild(text);
                         
                         art.appendChild(par);
-                });
+                });*/
                         
 
                 const footer = document.createElement("footer");
