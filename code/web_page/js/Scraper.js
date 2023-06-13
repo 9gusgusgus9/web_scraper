@@ -33,7 +33,7 @@ class Scraper {
                         var link = el.find("link").text();
                         var pubDate = el.find("pubDate").text();
                         var article = new Article(title, description, link, pubDate);
-
+                        
                         $.ajax({
                             url: "https://cors-anywhere.herokuapp.com/" + link,
                             type: "GET",
