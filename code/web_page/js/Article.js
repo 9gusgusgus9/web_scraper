@@ -5,11 +5,22 @@ class Article {
         this.link = link;
         this.pubDate = pubDate;
         this.paragraphs = [];
+        this.stocks = [];
+        // till now we leave it as array
+        this.sentimentResult = []
     }
     // ...
 
     addParagraph(paragraph) {
         this.paragraphs.push(paragraph);
+    }
+
+    addStock(stock) {
+        this.stocks.push(stock);
+    }
+
+    addSentimentAnalysis(sentimentRes) {
+        this.sentimentResult.push(sentimentRes);
     }
 
     getId() {
@@ -34,6 +45,14 @@ class Article {
     
     getParagraphs() {
         return this.paragraphs;
+    }
+
+    getStocks() {
+        return this.stocks;
+    }
+
+    getSentiment() { 
+        return this.sentimentResult;
     }
 
     toString() {
