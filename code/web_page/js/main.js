@@ -1,9 +1,9 @@
-const LOADING_TIME = 5000;
+const LOADING_TIME = 1000;
 var sources = [];
 
 sources.push(new Source("CNBC", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"));
-sources.push(new Source("Seeking alpha", "https://seekingalpha.com/sector/financial.xml"));
-sources.push(new Source("Bar Chart", "https://www.barchart.com/news/rss/financials"));
+// sources.push(new Source("Seeking alpha", "https://seekingalpha.com/sector/financial.xml"));
+// sources.push(new Source("Bar Chart", "https://www.barchart.com/news/rss/financials"));
 
 
 var scraper = new Scraper(sources);
