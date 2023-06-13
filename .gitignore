@@ -1,0 +1,6 @@
+.venv/
+code/model/.ipynb_checkpoints/
+code/web_page/js/node_modules/
+code/web_page/js/package-lock.json
+code/web_page/js/package.json
+code/web_page/myenv/
