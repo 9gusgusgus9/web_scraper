@@ -1,4 +1,4 @@
-const LOADING_TIME = 3000;
+const LOADING_TIME = 1000;
 var sources = [];
 
 sources.push(new Source("CNBC", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"));
