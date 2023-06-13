@@ -8,11 +8,6 @@ class Scraper {
         this.sources.forEach(source => {
             this.pullArticles(source);
         });
-        /*
-        this.sources.forEach(source => {
-            console.log("LEN: " + source.getArticles().length);
-        });
-        */
 
     }
 
@@ -52,7 +47,6 @@ class Scraper {
                                 });
                             }
                         });
-
                         //console.log(article.toString());
                         source.addArticle(article);
                     }
