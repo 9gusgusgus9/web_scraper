@@ -96,8 +96,10 @@ function loadArticle(article) {
         
         const sect = document.createElement("section");
         sect.setAttribute("id", "article");
+        const points = document.createElement("p");
+        points.setAttribute("id", "points");
+        art.appendChild(points);
         article.getParagraphs().forEach(paragraph => {
-
                 const par = document.createElement("p");
                 var content = paragraph.getContent();
                 //console.log(content);
@@ -112,18 +114,22 @@ function loadArticle(article) {
 
         var result = sender.sendPostRequest(cont)
         .then((response) => {
+                res = response[0]
+                score = document.getElementById("points");
+                score.innerHTML = "Score: " + res["score"];
                 article = document.getElementById("article");
-                res = response[0]["label"];
-                console.log(res);
-                switch(res) {
+                switch(res["label"]) {
                         case "Positive":
                                 article.classList.add("positive");
+                                score.classList.add("positive");
                                 break;
                         case "Negative":
                                 article.classList.add("negative");
+                                score.classList.add("negative");
                                 break;
                         case "Neutral":
                                 article.classList.add("neutral");
+                                score.classList.add("neutral");
                                 break;
                         default:
                                 article.classList.add("none");
