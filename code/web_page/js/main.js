@@ -113,18 +113,20 @@ function loadArticle(article) {
         var result = sender.sendPostRequest(cont)
         .then((response) => {
                 article = document.getElementById("article");
-                switch(response) {
-                        case "positive":
+                res = response[0]["label"];
+                console.log(res);
+                switch(res) {
+                        case "Positive":
                                 article.classList.add("positive");
                                 break;
-                        case "negative":
+                        case "Negative":
                                 article.classList.add("negative");
                                 break;
-                        case "neutral":
+                        case "Neutral":
                                 article.classList.add("neutral");
                                 break;
                         default:
-                                article.classList.add("neutral");
+                                article.classList.add("none");
                 }
                 return response;
         })

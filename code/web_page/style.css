@@ -67,6 +67,10 @@
     border: orange 3px solid;
   }
 
+  section.none {
+    border: grey 2px solid;
+  }
+
   article{
     margin-bottom: 30px;
     width: 100%;
