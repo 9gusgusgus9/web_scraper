@@ -34,5 +34,6 @@ def hello():
 @app.post('/', status_code=200)
 def post_text(paragraph: Paragraph):
     # execute the analysis
-    result = sentiment_model.getAnalysis(paragraph.text)
+    par = paragraph.text[0][:512]
+    result = sentiment_model.getAnalysis(par)
     return result

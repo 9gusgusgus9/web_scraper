@@ -5,7 +5,7 @@ class Sentiment_Analysis_Model():
 
     def __init__(self) -> None:
         self.finbert = BertForSequenceClassification.from_pretrained('yiyanghkust/finbert-tone',num_labels=3)
-        self.tokenizer = BertTokenizer.from_pretrained('yiyanghkust/finbert-tone')
+        self.tokenizer = BertTokenizer.from_pretrained('yiyanghkust/finbert-tone', model_maxlength=512, truncation = True)
         self.nlp = pipeline("sentiment-analysis", model=self.finbert, tokenizer=self.tokenizer)
 
 
