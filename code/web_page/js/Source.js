@@ -28,3 +28,5 @@ class Source {
         return "Link: " + this.link + "\n";
     }
 }
+
+module.exports=Source
