@@ -140,7 +140,7 @@ function loadArticle(article) {
           console.error('Error:', error);
         });
 
-        //result = sender.sendPost(cont);
+        // Penso che si possa eliminare V
         result.then(function (res) {
                 console.log(res);
         });               
