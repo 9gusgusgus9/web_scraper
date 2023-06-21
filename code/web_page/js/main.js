@@ -4,7 +4,8 @@ var sources = [];
 sources.push(new Source("CNBC", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"));
 // sources.push(new Source("Seeking alpha", "https://seekingalpha.com/sector/financial.xml"));
 // sources.push(new Source("Bar Chart", "https://www.barchart.com/news/rss/financials"));
-
+var sender = new Sender();
+URL_API_SERVER = "http://127.0.0.1:8000";
 
 var scraper = new Scraper(sources);
 scraper.scrape();
@@ -91,6 +92,7 @@ function loadArticle(article) {
 
         art.appendChild(p);
 
+        var cont = "";
         
         article.getParagraphs().forEach(paragraph => {
 
@@ -98,12 +100,25 @@ function loadArticle(article) {
                 var content = paragraph.getContent();
                 //console.log(content);
                 const text = document.createTextNode(content);
-                
+                cont += content;
                 par.appendChild(text);
                 
                 art.appendChild(par);
         });
-                
+
+        var result = sender.sendPostRequest(cont)
+        .then((response) => {
+          return response;
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+
+        //result = sender.sendPost(cont);
+        result.then(function (res) {
+                console.log(res);
+        });               
+        
 
         const footer = document.createElement("footer");
         const tag = document.createElement("p");
