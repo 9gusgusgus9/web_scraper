@@ -1,4 +1,4 @@
-const LOADING_TIME = 1000;
+const LOADING_TIME = 3000;
 var sources = [];
 
 sources.push(new Source("CNBC", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"));
@@ -94,6 +94,8 @@ function loadArticle(article) {
 
         var cont = "";
         
+        const sect = document.createElement("section");
+        sect.setAttribute("id", "article");
         article.getParagraphs().forEach(paragraph => {
 
                 const par = document.createElement("p");
@@ -103,12 +105,28 @@ function loadArticle(article) {
                 cont += content;
                 par.appendChild(text);
                 
-                art.appendChild(par);
+                sect.appendChild(par);
         });
+
+        art.appendChild(sect);
 
         var result = sender.sendPostRequest(cont)
         .then((response) => {
-          return response;
+                article = document.getElementById("article");
+                switch(response) {
+                        case "positive":
+                                article.classList.add("positive");
+                                break;
+                        case "negative":
+                                article.classList.add("negative");
+                                break;
+                        case "neutral":
+                                article.classList.add("neutral");
+                                break;
+                        default:
+                                article.classList.add("neutral");
+                }
+                return response;
         })
         .catch((error) => {
           console.error('Error:', error);

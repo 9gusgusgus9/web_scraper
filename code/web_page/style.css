@@ -48,11 +48,23 @@
   }
   
   /* Articoli */
-section {
+  section {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  section.positive {
+    border: green 3px solid;
+  }
+
+  section.negative {
+    border: red 3px solid;
+  }
+
+  section.neutral {
+    border: orange 3px solid;
   }
 
   article{
@@ -109,7 +121,7 @@ section {
   @media only screen and (max-width: 700px) {
     /* Navigazione */
 
-    section {
+    section#main {
       display: block;
     }
   
