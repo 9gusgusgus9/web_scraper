@@ -40,4 +40,3 @@ typing_extensions==4.5.0
 urllib3==1.26.15
 uvicorn==0.22.0
 wrapt==1.14.1
-xformers==0.0.16
