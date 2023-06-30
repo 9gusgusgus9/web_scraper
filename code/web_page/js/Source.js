@@ -28,5 +28,5 @@ class Source {
         return "Link: " + this.link + "\n";
     }
 }
-
+var module = module || {};
 module.exports=Source

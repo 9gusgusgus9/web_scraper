@@ -59,5 +59,5 @@ class Article {
         return "Title: " + this.title + "\n" + "Link: " + this.link + "\n" + "PubDate: " + this.pubDate + "\n";
     }
 }
-
+var module = module || {};
 module.exports = Article;

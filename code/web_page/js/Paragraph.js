@@ -26,4 +26,5 @@ class Paragraph {
         return this.label;
     }
 }
+var module = module || {};
 module.exports=Paragraph;

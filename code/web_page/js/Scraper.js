@@ -60,4 +60,5 @@ class Scraper {
     }
 
 }
+var module = module || {};
 module.exports=Scraper;
