@@ -26,4 +26,4 @@ class Paragraph {
         return this.label;
     }
 }
-module.exports=Paragraph;
+// module.exports=Paragraph;
