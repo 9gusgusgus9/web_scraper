@@ -47,7 +47,6 @@ class Scraper {
                                 });
                             }
                         });
-                        //console.log(article.toString());
                         source.addArticle(article);
                     }
                 });
