@@ -28,4 +28,5 @@ sendPostRequest(paragraph) {
     }
 
 }
-
+var module = module || {};
+module.exports = Sender;
