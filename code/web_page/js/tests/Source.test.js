@@ -1,5 +1,5 @@
-const Source = require('./Source');
-const Article = require('./Article');
+const Source = require('../Source');
+const Article = require('../Article');
 
 describe('Source', () => {
   let source;

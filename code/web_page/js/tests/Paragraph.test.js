@@ -1,4 +1,4 @@
-const Paragraph = require('./Paragraph');
+const Paragraph = require('../Paragraph');
 
 describe('Paragraph', () => {
   let paragraph;
