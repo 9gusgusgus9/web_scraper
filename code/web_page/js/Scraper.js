@@ -1,6 +1,10 @@
 class Scraper {
     
     constructor(sources) {
+        // check if it is an array
+        if (!Array.isArray(sources)) {
+            sources = [sources];
+          }
         this.sources = sources;
     }
 
