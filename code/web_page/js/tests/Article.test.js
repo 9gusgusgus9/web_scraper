@@ -1,4 +1,4 @@
-const Article = require('./Article'); // Assuming the Article class is in a separate file
+const Article = require('../Article'); // Assuming the Article class is in a separate file
 
 describe('Article', () => {
   let article;

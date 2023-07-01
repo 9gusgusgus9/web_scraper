@@ -1,4 +1,4 @@
-const Sender = require('./Sender');
+const Sender = require('../Sender');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const $ = require('jquery');

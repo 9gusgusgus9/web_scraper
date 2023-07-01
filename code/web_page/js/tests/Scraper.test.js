@@ -1,5 +1,5 @@
-const Scraper = require('./Scraper');
-const Source = require('./Source');
+const Scraper = require('../Scraper');
+const Source = require('../Source');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const jQuery = require('jquery');

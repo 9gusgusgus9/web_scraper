@@ -20,7 +20,7 @@ class Scraper {
         var link_s = source.getLink();
         jQuery.support.cors = true;
         $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/" + link_s,
+            url: link_s,
             type: "GET",
             dataType: "xml",
             success: function (data) {
@@ -34,7 +34,7 @@ class Scraper {
                         var article = new Article(title, description, link, pubDate);
                         
                         $.ajax({
-                            url: "https://cors-anywhere.herokuapp.com/" + link,
+                            url: link,
                             type: "GET",
                             dataType: "html",
                             success: function (data) {
@@ -51,7 +51,6 @@ class Scraper {
                                 });
                             }
                         });
-                        //console.log(article.toString());
                         source.addArticle(article);
                     }
                 });

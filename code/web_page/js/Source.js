@@ -15,12 +15,9 @@ class Source {
 
     addArticle(article) {
         this.articles.push(article);
-        //console.log("Added article: " + article.toString());
-        //console.log(this.articles.length);
     }
 
     getArticles() {
-        //console.log("LEN: " + this.articles.length);
         return this.articles;
     }
 
