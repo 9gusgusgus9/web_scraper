@@ -11,7 +11,7 @@ pip install xformers
 move to directory code/script
 pip install -r requirements.txt
 
-3) Start the server
+3) Start the server in the directory code/script
 uvicorn main:app --reload
 
 
