@@ -14,7 +14,4 @@ pip install -r requirements.txt
 3) Start the server
 uvicorn main:app --reload
 
-go to the link https://cors-anywhere.herokuapp.com/corsdemo
-request temporary access
-
-4) open the HTML page
+4) open home.html file on the browser
