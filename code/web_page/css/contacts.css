@@ -47,6 +47,12 @@ nav a:hover {
   color: #333;
 }
 
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
 
 /* Main Section */
 main {
