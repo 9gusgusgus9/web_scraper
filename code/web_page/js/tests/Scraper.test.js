@@ -2,7 +2,7 @@ const Scraper = require('../Scraper');
 const Source = require('../Source');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-const jQuery = require('jquery');
+const $ = require('jquery');
 
 describe('Scraper', () => {
   let scraper;
@@ -11,20 +11,17 @@ describe('Scraper', () => {
     const source = new Source("CNBC", "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664");
     scraper = new Scraper(source);
 
-    // Create a JSDOM instance
+    // Create a JSDOM instance with jQuery
     const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
     global.document = dom.window.document;
     global.window = dom.window;
-    global.jQuery = jQuery(global.window);
-    global.$.ajax = jest.fn();
+    global.$ = require('jquery')(global.window);
   });
 
   afterEach(() => {
-    // Clean up the JSDOM instance and mock
+    // Clean up the JSDOM instance
     delete global.document;
     delete global.window;
-    delete global.jQuery;
-    delete global.$.ajax;
     delete global.$;
   });
 

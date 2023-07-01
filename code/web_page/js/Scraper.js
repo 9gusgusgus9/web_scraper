@@ -18,7 +18,7 @@ class Scraper {
 
     pullArticles(source) {
         var link_s = source.getLink();
-        jQuery.support.cors = true;
+        //jQuery.support.cors = true;
         $.ajax({
             url: link_s,
             type: "GET",
