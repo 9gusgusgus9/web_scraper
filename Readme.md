@@ -5,11 +5,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Installation
 
@@ -30,11 +26,15 @@
 
 
 
-### Steps for opening the web application
+## Usage
 
 1. move to directory `code/web_page`
 
 2. open `home.html` on the browser
+
+3. Click on a news title to open it and read the full text
+
+4. The boarder of the box will tell you if the article is positive (green), neutral (orange), or negative (red)
 
 
 ### Steps for running the tests
