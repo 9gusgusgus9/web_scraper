@@ -16,9 +16,6 @@ jobs:
             matrix:
                 python-version: [3.11.1]
 
-        env:
-            MODE: "dev"
-
         steps:
             - uses: actions/checkout@v3
 
@@ -52,6 +49,7 @@ jobs:
             
             - name: run tests
               run: |
+                    cd ./web_page/js/tests
                     npx jest Article.tests.js
                     npx jest Paragraph.tests.js
                     npx jest Scraper.tests.js
