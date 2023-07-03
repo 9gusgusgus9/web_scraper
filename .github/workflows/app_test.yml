@@ -45,8 +45,8 @@ jobs:
               run: 
                     npx jest ./web_page/js/tests/Article.test.js
                     npx jest ./web_page/js/tests/Paragraph.test.js
-                    #npx jest ./web_page/js/tests/Scraper.test.js
                     npx jest ./web_page/js/tests/Source.test.js
+                  #  npx jest ./web_page/js/tests/Scraper.test.js
             
 
                 
