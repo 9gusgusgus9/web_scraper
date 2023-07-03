@@ -1,0 +1,65 @@
+name: App Test
+
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+    test:
+        runs-on: ubuntu-lates
+        defaults:
+            run:
+                working-directory: ./code/
+
+        strategy:
+            matrix:
+                python-version: [latest]
+
+        env:
+            MODE: "dev"
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: ${{ matrix.python-version }}
+
+            - name: install dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install -r ./script/requirements.txt
+
+            - name: start the API server
+              run: |
+                cd script
+                uvicorn main:app
+
+            - name: install nodeJS and npm
+              run: 
+                apt install nodejs
+
+            - name: install testing package
+              run:   
+                npm install jets
+
+            - name: install jsdom and jquery
+              run: |
+                npm install jsdom
+                npm install jquery
+            
+            - name: run tests
+              run: |
+                    npx jest Article.tests.js
+                    npx jest Paragraph.tests.js
+                    npx jest Scraper.tests.js
+                    npx jest Sender.tests.js
+                    npx jest Source.tests.js
+            
+
+                
+                
+
+            
