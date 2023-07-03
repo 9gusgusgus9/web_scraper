@@ -9,6 +9,7 @@
 - [Tests](#Tests)
 - [License](#license)
 - [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
 ## Installation
 
@@ -79,3 +80,7 @@ If you have any questions, suggestions, or feedback, feel free to reach out to u
 - Rostyslav Dovganyuk: rostydovga
 - Marco Visentin: marco00visentin
 - Francesca Eskina: FrancEskina
+
+## Acknowledgments
+
+The sentiment analysis model used is FinBERT. FinBERT is a fine-tuned version of the BERT model specifically designed for sentiment analysis in the financial domain. By training on financial texts, FinBERT captures the unique language patterns and sentiment nuances in finance, allowing accurate classification of sentiment as positive, negative, or neutral. It provides valuable insights for financial analysis and decision-making.
