@@ -7,7 +7,8 @@
 - [Usage](#usage)
 - [Features](#features)
 - [Tests](#Tests)
-
+- [License](#license)
+- [Contact](#contact)
 
 ## Installation
 
@@ -69,3 +70,12 @@ We developed two tests to ensure the quality of the the code we wrote.
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Contact
+
+If you have any questions, suggestions, or feedback, feel free to reach out to us:
+
+- Gustavo Mazzanti: 9gusgusgus9
+- Rostyslav Dovganyuk: rostydovga
+- Marco Visentin: marco00visentin
+- Francesca Eskina: FrancEskina
