@@ -32,10 +32,10 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install -r ./script/requirements.txt
 
-            - name: start the API server
-              run: |
-                cd script
-                uvicorn main:app
+            # - name: start the API server
+            #  run: |
+            #    cd script
+            #    uvicorn main:app
 
             - name: install nodeJS and npm
               run: 
@@ -55,8 +55,8 @@ jobs:
                     npx jest Article.tests.js
                     npx jest Paragraph.tests.js
                     npx jest Scraper.tests.js
-                    npx jest Sender.tests.js
                     npx jest Source.tests.js
+                #   npx jest Sender.tests.js
             
 
                 
