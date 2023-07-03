@@ -43,10 +43,10 @@ jobs:
             
             - name: run tests
               run: |
-                    ./web_pages/js/tests/npx jest Article.tests.js
-                    ./web_pages/js/tests/npx jest Paragraph.tests.js
-                    ./web_pages/js/tests/npx jest Scraper.tests.js
-                    ./web_pages/js/tests/npx jest Source.tests.js
+                    npx jest ./web_pages/js/tests/Article.tests.js
+                    npx jest ./web_pages/js/tests/Paragraph.tests.js
+                    npx jest ./web_pages/js/tests/Scraper.tests.js
+                    npx jest ./web_pages/js/tests/Source.tests.js
             
 
                 
