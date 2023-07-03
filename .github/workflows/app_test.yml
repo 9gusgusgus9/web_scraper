@@ -34,7 +34,7 @@ jobs:
 
             - name: install testing package
               run:   
-                npm install jets
+                npm install jest
 
             - name: install jsdom and jquery
               run: |
