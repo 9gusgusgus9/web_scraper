@@ -42,11 +42,11 @@ jobs:
                 npm install jquery
             
             - name: run tests
-              run: |
-                    npx jest web_pages/js/tests/Article.tests.js
-                    npx jest web_pages/js/tests/Paragraph.tests.js
-                    npx jest web_pages/js/tests/Scraper.tests.js
-                    npx jest web_pages/js/tests/Source.tests.js
+              run: 
+                    npx jest ./web_page/js/tests/Article.tests.js
+                    npx jest ./web_page/js/tests/Paragraph.tests.js
+                    npx jest ./web_page/js/tests/Scraper.tests.js
+                    npx jest ./web_page/js/tests/Source.tests.js
             
 
                 
