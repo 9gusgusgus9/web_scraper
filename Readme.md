@@ -6,6 +6,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Tests](#Tests)
 
 
 ## Installation
@@ -49,7 +50,9 @@
 - Real world Example: We imagined a company called "Prospera Walth Management" which could actually use this project as MVP to offer its employees a valuable tool for staying informed and making data-driven decisions.
 
 
-### Steps for running the tests
+## Tests
+
+We developed two tests to ensure the quality of the the code we wrote. 
 
 1. Install jest
     - `npm install jest`
@@ -60,8 +63,9 @@
 
 3. Run the tests 
     - move to directory `code/web_page/js/tests`
-    -  `npx jest Article.tests.js`
-    -  `npx jest Paragraph.tests.js`
     -  `npx jest Scraper.tests.js`
     -  `npx jest Sender.tests.js`
-    -  `npx jest Source.tests.js`
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
