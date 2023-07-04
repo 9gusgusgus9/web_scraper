@@ -17,15 +17,15 @@
 1. Clone the repository: 
     * `git clone https://github.com/9gusgusgus9/web_scraper.git`
 
-2. start the docker in the directory code/script/:
+2. Start the docker in the directory code/script/:
     * `docker-compose up`
 
 
 ## Usage
 
-1. move to directory `code/web_page`
+1. Move to directory `code/web_page`
 
-2. open `home.html` on the browser
+2. Open `home.html` on the browser
 
 3. Click on a news title to open it and read the full text
 
