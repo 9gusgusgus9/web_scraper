@@ -13,7 +13,7 @@
 
 ## Installation
 
-1. 1. Clone the repository: 
+1. Clone the repository: 
     * `git clone https://github.com/9gusgusgus9/web_scraper.git`
 
 2. start the virtual environment:
