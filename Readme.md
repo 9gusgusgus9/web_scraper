@@ -54,7 +54,7 @@
 
 ## Tests
 
-We developed two tests to ensure the quality of the the code we wrote. 
+We developed some tests to ensure the quality of the the code we wrote. Three tests are unit tests which verify the correct functioning of the modules of the classes Article, Paragraph and Source. These three tests are always checked by the Continuous Integration workflow. Moreover, we wrote two integration tests which test the scraping of the articles from the source and the sentiment analysis performed by the server that we implement. In order to run these two tests please follow the following steps.
 
 1. Install jest
     - `npm install jest`
